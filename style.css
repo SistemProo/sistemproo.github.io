@@ -1,15 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wdth,wght@50..200,200..900&display=swap');
 
 * {
-    margin-left: 50px;
-    margin-right: 50px;
-    
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Inconsolata", sans-serif;
 }
 /* Header */
 header {
+    background-color: limegreen;
     border-left: 1px solid black;
     border-right: 1px solid black;
     display: flex;
@@ -68,6 +67,7 @@ nav ul{
 
 .text {
     margin-top: 10px;
+    padding: 50px;
 }
 
 .naslov1 {
@@ -129,5 +129,5 @@ main h2 {
 
 /* Footer */
 footer {
-    background-color: blue;
+    background-color: limegreen;
 }
