@@ -17,6 +17,19 @@ header {
     border-bottom: 1px solid black;
 }
 
+.info {
+    display: flex;
+    justify-content: end;
+    background-color: white;
+    margin-right: 100px;
+    height: 25px;
+    align-items: center;
+}
+
+.info p {
+    padding-right: 90px;
+}
+
 .naslov {
     display: flex;
 }
