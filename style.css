@@ -6,6 +6,18 @@
     box-sizing: border-box;
     font-family: "Inconsolata", sans-serif;
 }
+
+@media (min-width:320px)  { /* smartphones, iPhone, portrait 480x320 phones */ }
+
+@media (min-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
+
+@media (min-width:641px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
+
+@media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
+
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
+
+@media (min-width:1281px) { /* hi-res laptops and desktops */ 
 /* Header */
 header {
     background-color: limegreen;
@@ -20,10 +32,17 @@ header {
 .info {
     display: flex;
     justify-content: end;
-    background-color: white;
-    margin-right: 100px;
+    background-color: #1C1C1C;
+    color: rgba(255, 255, 255, 0.6);
+    border-bottom: 1.5px solid rgba(255, 255, 255, 0.6);
+    padding-right: 100px;
     height: 25px;
     align-items: center;
+}
+
+.info a {
+    color: white;
+    cursor: pointer;
 }
 
 .info p {
@@ -62,6 +81,10 @@ nav ul{
     margin-top: 25px;
 }
 
+li a {
+    color: white;
+}
+
 .menu {
     margin-left: 50px;
     margin-right: 50px;
@@ -74,35 +97,172 @@ nav ul{
 
 /* Main */
 
+main {
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1200px;
+    background-color: #f4f4f4;
+}
+
+/* Stilizovanje osnovne sekcije */
 .pocetna {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.pocetna h1 {
+    font-size: 2.5rem;
+    color: black;
     margin-bottom: 20px;
 }
 
-.text {
-    padding: 50px;
+.pocetna .text {
+    font-size: 1.1rem;
+    color: black;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
 }
 
-.naslov1 {
-    padding: 20px;
+/* Stilizovanje sekcije sa uslugama */
+.usluge {
+    margin-bottom: 40px;
 }
 
-/* Generalni stilovi za main */
-main {
-    padding: 20px;
-    background-color: #f9f9f9;
-}
-
-/* Sekcija naslov */
-main h2 {
+.usluge .naslov1 {
     font-size: 2rem;
     text-align: center;
+    color: black;
     margin-bottom: 20px;
 }
 
-.usluge {
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
 }
+
+.card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1rem;
+    color: black;
+    line-height: 1.6;
+}
+
+/* Stilizovanje edukativnih sekcija */
+.education {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.education h3 {
+    font-size: 1.5rem;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.education p {
+    font-size: 1rem;
+    color: black;
+    line-height: 1.6;
+}
+
+/* Stilizovanje sekcije sa tekstovima koji naglašavaju životni vek računara */
+.section2, .section3 {
+    margin-bottom: 40px;
+}
+
+.section2 h2, .section3 h2 {
+    font-size: 2rem;
+    text-align: center;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.text1 {
+    font-size: 1.1rem;
+    color: black;
+    line-height: 1.6;
+}
+
+/* Stilizovanje specifičnih tekstova */
+.text1, .education p {
+    margin-bottom: 20px;
+}
+
+/* Stranica Usluge */
+.stranica_usluge {
+    width: 50%; /* Ili koliko procenata širine želiš */
+    margin: 0 auto; /* Centriranje horizontalno */
+    text-align: left; /* Poravnanje teksta ulevo */
+    padding: 20px; /* Opcionalno, dodaje prostor unutar elementa */
+    border: 1px solid #ddd; /* Za vizuelnu pomoć (opcionalno) */
+}
+
+.usluge1 {
+    padding-bottom: 15px;
+}
+
+.usluge1 h4 {
+    padding-bottom: 10px;
+}
+
+.napomena {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+
+/* Kontakt stranica */
+.naziv {
+    text-align: center;
+    padding: 15px 0px;
+    color: #887E30;
+}
+
+.map {
+    border: 1px solid rgb(62, 61, 61);
+    width: 50%;
+}
+
+.map iframe {
+    width: 100%;
+    height: 340px;
+}
+
+.about {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
+    text-align: center;
+    color: rgb(62, 61, 61);
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
 
 /* Grid layout za usluge */
 .grid {
@@ -135,7 +295,7 @@ main h2 {
 
 .card p {
     font-size: 1rem;
-    color: #555;
+    color: black;
 }
 
 .section2 {
@@ -170,5 +330,75 @@ h3 {
 
 /* Footer */
 footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    padding-top: 35px;
+    padding-left: 30px;
+    padding-right: 30px;
     background-color: limegreen;
+    border-top: 1px solid black;
+}
+
+.footer-h3 {
+    color: black;
+    padding-bottom: 35px;
+    border-bottom: 1px solid black;
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    
+}
+
+.footer-nav a {
+    color: white;
+    text-decoration: none;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.footer-contact {
+    color: black;
+    padding-top: 25px;
+}
+
+.phone {
+    padding-left: 20px;
+    padding-bottom: 35px;
+    border-bottom: 1px solid black;
+}
+
+.footer-insta {
+        padding-top: 25px;
+}
+
+.footer-insta a {
+    padding-left: 20px;
+    padding-bottom: 35px;
+    color: white;
+    cursor: pointer;
+}
+
+.footer-location {
+    padding-top: 0;
+}
+
+.footer-map {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-align: center;
+}
+
+.copyright {
+    background-color: #1C1C1C;
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    border-top: 1.5px solid rgba(255, 255, 255, 0.6);
+    padding: 5px 0;
+}
 }
